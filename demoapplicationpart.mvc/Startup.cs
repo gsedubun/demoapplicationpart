@@ -33,7 +33,9 @@ namespace demoapplicationpart.mvc
                 .AddRazorRuntimeCompilation();
 
             services.Configure<MvcRazorRuntimeCompilationOptions>(options =>
-            { options.FileProviders.Add(new EmbeddedFileProvider(assembly)); });
+            {
+                options.FileProviders.Add(new EmbeddedFileProvider(assembly));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
